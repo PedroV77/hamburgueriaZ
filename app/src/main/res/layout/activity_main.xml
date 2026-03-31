@@ -1,0 +1,88 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_hamburgueria" /> <TextView
+        style="@style/EstiloTexto"
+    android:text="Faça seu pedido!" />
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="Digite seu nome"
+        tools:ignore="TextFields" />
+
+    <CheckBox
+        android:id="@+id/chkBacon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bacon"/>
+
+    <CheckBox
+        android:id="@+id/chkQueijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Queijo"/>
+
+    <CheckBox
+        android:id="@+id/chkOnion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Onion Rings"/>
+
+    <TextView
+        android:text="Quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="subtrair"/>
+
+        <TextView
+            android:id="@+id/txtQuantidade"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"/>
+
+        <Button
+            android:text="+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="somar"/>
+    </LinearLayout>
+
+    <Button
+        android:text="Enviar Pedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="enviarPedido"/>
+
+    <TextView
+        android:id="@+id/txtResumo"
+        android:text="Resumo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
